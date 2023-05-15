@@ -262,6 +262,7 @@ public class ADDdoctor extends javax.swing.JFrame {
             jTextField5.setText("");
             jTextField6.setText(" ");
             } 
+        
           catch (SQLException ex) { 
                 System.out.println(ex.getMessage());
                       }

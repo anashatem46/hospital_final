@@ -3,13 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/conection/appconnection.java</file>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/doctor/LoginPage.java</file>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/admin/doctor.java</file>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/admin/ADDdoctor.java</file>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/admin/main.java</file>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/admin/Admin.java</file>
-            <file>file:/Users/aanshatem/Documents/GitHub/hospital/src/admin/Stuff.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/rec/patient.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/admin/ADDdoctor.java</file>
         </group>
     </open-files>
 </project-private>
