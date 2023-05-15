@@ -22,22 +22,22 @@ public class Stuff extends javax.swing.JFrame {
      */
     public Stuff() {
         initComponents();
-       try {
+        try {
              Statement statement=null;
              Connection dbConnection=null;
              appconnection mc1=new appconnection();
              dbConnection=mc1.getconConnection();
              statement=dbConnection.createStatement();
-             String sql1 = "Select * FROM Stuff" ;
+             String sql1 = "Select * FROM stuff" ;
              ResultSet rs1 = statement.executeQuery(sql1);
              
              while (rs1.next()) {        
               String ID = String.valueOf(rs1.getInt("ID")) ;
               String Name = rs1.getString ("Name");
-              String Mail= rs1.getString("mail");
+              String PhoueNum= rs1.getString("PhoneNum");
               String Dep= rs1.getString("Dep");
               
-              String tbData[] = {ID, Name, Mail};
+              String tbData[] = {ID, Name,PhoueNum,Dep};
                  DefaultTableModel tblModel =(DefaultTableModel)jTable1.getModel();
                  
                  tblModel.addRow(tbData);
@@ -73,6 +73,8 @@ public class Stuff extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,10 +135,7 @@ public class Stuff extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "ID", "Name", "Mail", "PhoneNum", "DEP"
@@ -165,6 +164,19 @@ public class Stuff extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("search");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -172,23 +184,32 @@ public class Stuff extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(81, 81, 81)
                         .addComponent(jButton7)
                         .addGap(18, 18, 18)
                         .addComponent(jButton8)
                         .addGap(28, 28, 28)
-                        .addComponent(jButton9)))
-                .addContainerGap(191, Short.MAX_VALUE))
+                        .addComponent(jButton9))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jTextField1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton6))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(91, 91, 91))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton6))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8)
@@ -248,6 +269,47 @@ public class Stuff extends javax.swing.JFrame {
           this.setVisible(false);
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        try {
+
+            jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [][] {
+                },  new String [] {
+                    "ID", "Name", "Mail", "PhoneNum", "specialty"
+                }
+            ));
+            Statement statement=null;
+            Connection dbConnection=null;
+            appconnection mc1=new appconnection();
+            dbConnection=mc1.getconConnection();
+            statement=dbConnection.createStatement();
+            String sql1 = "Select * FROM Stuff WHERE Name = '"+ jTextField1.getText()+"'";
+            ResultSet rs1 = statement.executeQuery(sql1);
+
+            while (rs1.next()) {
+                String ID = String.valueOf(rs1.getInt("ID")) ;
+                String Name = rs1.getString ("Name");
+               
+                String Dep= rs1.getString("Dep");
+                String PhoueNum= rs1.getString("PhoneNum");
+
+                String tbData[] = {ID, Name,PhoueNum,Dep};
+                DefaultTableModel tblModel =(DefaultTableModel)jTable1.getModel();
+
+                tblModel.addRow(tbData);
+
+            }
+        }
+        catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -292,6 +354,7 @@ public class Stuff extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -299,5 +362,6 @@ public class Stuff extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

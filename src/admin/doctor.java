@@ -1,4 +1,5 @@
 package admin;
+
 import Login.LoginDoc;
 import conection.appconnection;
 import java.sql.Statement;
@@ -7,6 +8,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -18,40 +20,37 @@ import javax.swing.table.DefaultTableModel;
  */
 public class doctor extends javax.swing.JFrame {
 
-    
-     // Creates new form Admin
-     
+    // Creates new form Admin
     public doctor() {
         initComponents();
-        /**
-       try {
-             Statement statement=null;
-             Connection dbConnection=null;
-             appconnection mc1=new appconnection();
-             dbConnection=mc1.getconConnection();
-             statement=dbConnection.createStatement();
-             String sql1 = "Select * FROM doctor" ;
-             ResultSet rs1 = statement.executeQuery(sql1);
-             
-             while (rs1.next()) {        
-              String ID = String.valueOf(rs1.getInt("ID")) ;
-              String Name = rs1.getString ("Name");
-              String Mail= rs1.getString("mail");
-              
-              String tbData[] = {ID, Name, Mail};
-                 DefaultTableModel tblModel =(DefaultTableModel)jTable1.getModel();
-                 
-                 tblModel.addRow(tbData);
-                 
-            
-               
-             }
-        } 
-        catch (SQLException ex) {
-                                System.out.println(ex.getMessage());
+
+        try {
+            Statement statement = null;
+            Connection dbConnection = null;
+            appconnection mc1 = new appconnection();
+            dbConnection = mc1.getconConnection();
+            statement = dbConnection.createStatement();
+            String sql1 = "Select * FROM doctor";
+            ResultSet rs1 = statement.executeQuery(sql1);
+
+            while (rs1.next()) {
+                String ID = String.valueOf(rs1.getInt("ID"));
+                String Name = rs1.getString("Name");
+                String Mail = rs1.getString("mail");
+                String PhoueNum = rs1.getString("PhoneNum");
+                String specialty = rs1.getString("specialty");
+
+                String tbData[] = {ID, Name, Mail, PhoueNum, specialty};
+                DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
+
+                tblModel.addRow(tbData);
 
             }
-            * */
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+
+        }
+
     }
 
     /**
@@ -145,12 +144,10 @@ public class doctor extends javax.swing.JFrame {
                 .addGap(71, 71, 71))
         );
 
+        jTable1.setAutoCreateRowSorter(true);
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "ID", "Name", "Mail", "PhoneNum", "specialty"
@@ -248,7 +245,7 @@ public class doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Patints n=new Patints();
+        Patints n = new Patints();
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -258,27 +255,83 @@ public class doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        ADDdoctor n=new ADDdoctor();
+        ADDdoctor n = new ADDdoctor();
         n.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         try {
+
+            jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                    new Object[][]{}, new String[]{
+                        "ID", "Name", "Mail", "PhoneNum", "specialty"
+                    }
+            ));
+            Statement statement = null;
+            Connection dbConnection = null;
+            appconnection mc1 = new appconnection();
+            dbConnection = mc1.getconConnection();
+            statement = dbConnection.createStatement();
+            String sql1 = "Select * FROM doctor WHERE Name = '" + jTextField1.getText() + "'";
+            ResultSet rs1 = statement.executeQuery(sql1);
+
+            while (rs1.next()) {
+                String ID = String.valueOf(rs1.getInt("ID"));
+                String Name = rs1.getString("Name");
+                String Mail = rs1.getString("mail");
+                String specialty = rs1.getString("specialty");
+                String PhoueNum = rs1.getString("PhoneNum");
+
+                String tbData[] = {ID, Name, Mail, PhoueNum, specialty};
+                DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
+
+                tblModel.addRow(tbData);
+
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        doctor n = new doctor();
+        n.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        EditDoctor n = new EditDoctor();
+        n.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Stuff n = new Stuff();
+        n.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
+         try {
              Statement statement=null;
              Connection dbConnection=null;
              appconnection mc1=new appconnection();
              dbConnection=mc1.getconConnection();
              statement=dbConnection.createStatement();
-             String sql1 = "Select * FROM doctor WHERE Name = '"+ jTextField1.getText()+"'";
+             String sql1 = "Select * FROM doctor" ;
              ResultSet rs1 = statement.executeQuery(sql1);
              
              while (rs1.next()) {        
               String ID = String.valueOf(rs1.getInt("ID")) ;
               String Name = rs1.getString ("Name");
               String Mail= rs1.getString("mail");
+              String PhoueNum= rs1.getString("PhoneNum");
+              String specialty= rs1.getString("specialty");
               
-              String tbData[] = {ID, Name, Mail};
+              String tbData[] = {ID, Name, Mail,PhoueNum,specialty};
                  DefaultTableModel tblModel =(DefaultTableModel)jTable1.getModel();
                  
                  tblModel.addRow(tbData);
@@ -290,32 +343,9 @@ public class doctor extends javax.swing.JFrame {
         catch (SQLException ex) {
                                 System.out.println(ex.getMessage());
 
-            }
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        doctor n=new doctor();
+            } n = new LoginDoc();
         n.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        EditDoctor n=new EditDoctor();
-          n.setVisible(true);
-          this.setVisible(false);
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Stuff n=new Stuff();
-        n.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
-        LoginDoc n=new LoginDoc();
-                   n.setVisible(true);
-                  this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
