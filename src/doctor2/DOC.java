@@ -1,6 +1,6 @@
 package doctor2;
 
-import Login.LOGIN;
+
 
 /**
  *
@@ -225,8 +225,7 @@ public class DOC extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        LOGIN O =new LOGIN();
-        O.setVisible(true);
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

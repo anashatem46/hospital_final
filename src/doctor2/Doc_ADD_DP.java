@@ -4,19 +4,6 @@
  */
 package doctor2;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> parent of b87fc06 (loginfrist)
-=======
->>>>>>> parent of ab257f1 (aaa)
-
 import conection.appconnection;
 import java.sql.Statement;
 import java.sql.SQLException;
@@ -31,18 +18,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of f00a1a6 (loginfrist)
-=======
->>>>>>> parent of f00a1a6 (loginfrist)
-=======
->>>>>>> Stashed changes
->>>>>>> parent of b87fc06 (loginfrist)
-=======
->>>>>>> parent of ab257f1 (aaa)
 /**
  *
  * @author Asmaa
@@ -178,17 +154,17 @@ public class Doc_ADD_DP extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(103, 103, 103)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
+                .addGap(29, 29, 29)
                 .addComponent(jButton5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
