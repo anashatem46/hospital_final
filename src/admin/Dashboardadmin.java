@@ -37,31 +37,14 @@ public class Dashboardadmin extends javax.swing.JFrame {
             appconnection mc1=new appconnection();
             dbConnection=mc1.getconConnection();
             statement=dbConnection.createStatement();
-            
-            String sql3 = "SELECT indx FROM doctor ORDER BY Id DESC LIMIT 1;";
-            ResultSet rs3 = statement.executeQuery(sql3);
-            while (rs3.next()) 
-            {
-                    jTextField2.setText(rs3.getString("indx"));      
-            }
-            
-        
-            String sql2 = "SELECT indx FROM patint ORDER BY Id DESC LIMIT 1;";
-            ResultSet rs1 = statement.executeQuery(sql2);
-            while (rs1.next()) 
-            {
-                    jTextField3.setText(rs1.getString("indx"));      
-            }
-            
-            
             String sql1 = "Select * FROM admin WHERE Name = '"+ Name+"'";
             ResultSet rs2 = statement.executeQuery(sql1);
 
-           
+            // ResultSet rs = appconnection.getDate("SELECT * FROM patint WHERE ID= '"+search.getText()+"'");
             if(rs2.next())
             {
                 jLabel3.setText(rs2.getString("Name")+" ");
-                
+                jTextField2.setText(rs2.getString("Name")+" ");
                 //this.repaint();
               
                 System.out.println(rs2.getString("ID"));
@@ -136,6 +119,8 @@ public class Dashboardadmin extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("jLabel3");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -168,7 +153,7 @@ public class Dashboardadmin extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addGap(71, 71, 71))
         );
