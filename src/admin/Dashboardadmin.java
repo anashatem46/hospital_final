@@ -44,6 +44,7 @@ public class Dashboardadmin extends javax.swing.JFrame {
             if(rs2.next())
             {
                 jLabel3.setText(rs2.getString("Name")+" ");
+                jTextField2.setText(rs2.getString("Name")+" ");
                 //this.repaint();
               
                 System.out.println(rs2.getString("ID"));
