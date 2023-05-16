@@ -49,12 +49,14 @@ public class DOC extends javax.swing.JFrame {
             appconnection mc1=new appconnection();
             dbConnection=mc1.getconConnection();
             statement=dbConnection.createStatement();
+            
             String sql1 = "SELECT indx FROM patint ORDER BY Id DESC LIMIT 1;";
             ResultSet rs1 = statement.executeQuery(sql1);
             while (rs1.next()) 
             {
                     jLabel2.setText(rs1.getString("indx"));      
             }
+            
             String sql2 = "Select * FROM doctor WHERE Name = '"+ Name+"'";
             ResultSet rs2 = statement.executeQuery(sql2);
 
