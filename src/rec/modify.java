@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package rec;
+import Login.Firstpage;
 import conection.appconnection;
 import java.sql.Statement;
 import java.sql.Connection;
@@ -39,13 +40,16 @@ public class modify extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton7 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -73,6 +77,14 @@ public class modify extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
 
+        jButton7.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButton7.setText("Delete Patient");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,11 +92,16 @@ public class modify extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setText("Hospital");
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
-        jButton4.setText("patient");
+        jButton4.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButton4.setText("Add Patient");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -122,16 +139,37 @@ public class modify extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        jButton8.setText("Logout");
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton9.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButton9.setText("Delete Patient");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
+                jButton9MouseClicked(evt);
             }
         });
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+
+        jButton10.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButton10.setText("Modify Patient");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButton11.setText("Logout");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
             }
         });
 
@@ -147,11 +185,14 @@ public class modify extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton10)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -165,12 +206,16 @@ public class modify extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -378,7 +423,7 @@ public class modify extends javax.swing.JFrame {
                             .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(31, 31, 31))
         );
@@ -397,7 +442,7 @@ public class modify extends javax.swing.JFrame {
        
         try {
             statement=dbConnection.createStatement();
-            String sql = "Update patint set Name='" + jTextField3.getText()+"',Blood='"+jTextField6.getText()+"',Phone='"+jTextField4.getText()+"',Gender='"+jTextField4.getText()+"'"+ " WHERE id="+jTextField2.getText();
+            String sql = "Update patint set Name='" + jTextField2.getText()+"',Blood='"+jTextField6.getText()+"',Mail='"+jTextField5.getText()+"',AGE='"+jTextField7.getText()+"',Day='"+jTextField8.getText()+"',ID='"+jTextField11.getText()+"',Bill='"+jTextField10.getText()+"',Time='"+jTextField9.getText()+"',Phone='"+jTextField3.getText()+"',Gender='"+jTextField4.getText()+"'"+ " WHERE id="+jTextField1.getText();
              statement.executeUpdate(sql);
             
             JOptionPane.showMessageDialog(null,"patient has been Update Successfully");
@@ -424,7 +469,7 @@ public class modify extends javax.swing.JFrame {
             if(rs2.next())
             {
                 jTextField11.setText(rs2.getString("ID"));
-                jTextField2.setText(rs2.getString("name"));
+                jTextField2.setText(rs2.getString("Name"));
                 jTextField4.setText(rs2.getString("Gender"));
                 jTextField3.setText(rs2.getString("Phone"));
                 jTextField6.setText(rs2.getString("Blood"));
@@ -467,14 +512,6 @@ public class modify extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton5MouseClicked
 
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8MouseClicked
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
@@ -498,6 +535,42 @@ public class modify extends javax.swing.JFrame {
     private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        delete jf5 = new delete();
+        jf5.show();
+        dispose();
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        delete jf5 = new delete();
+        jf5.show();
+        dispose();
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        modify jf4 = new modify();
+        jf4.show();
+        dispose();
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        Firstpage jf4 = new Firstpage();
+        jf4.show();
+        dispose();
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -541,11 +614,14 @@ public class modify extends javax.swing.JFrame {
     private javax.swing.JLabel gender;
     private javax.swing.JLabel id;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

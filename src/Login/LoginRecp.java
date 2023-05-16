@@ -4,7 +4,7 @@
  */
 package Login;
 import admin.doctor;
-import rec.dashboard;
+import rec.patient;
 import conection.appconnection;
 import java.sql.Statement;
 import java.sql.Connection;
