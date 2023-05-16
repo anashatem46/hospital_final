@@ -1,6 +1,6 @@
 package admin;
 
-import Login.LoginDoc;
+import Login.Firstpage;
 import conection.appconnection;
 import java.sql.Statement;
 import java.sql.Connection;
@@ -315,7 +315,7 @@ public class doctor extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        LoginDoc    n = new LoginDoc();
+        Firstpage    n = new Firstpage();
         n.setVisible(true);
         this.setVisible(false);
          

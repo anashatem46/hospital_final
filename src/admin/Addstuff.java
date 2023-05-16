@@ -256,7 +256,9 @@ public class Addstuff extends javax.swing.JFrame {
         try {
             statement=dbConnection.createStatement();
             String insertTableSQL;
-            insertTableSQL=("INSERT INTO stuff"+"(Name,ID,Password,PhoneNum,Dep)"+"VALUES"+"("+"'"+jTextField1.getText()+"','"+jTextField2.getText()+"','"+jTextField3.getText()+"','"+jTextField6.getText()+"','"+jComboBox1.getItemAt(jComboBox1.getSelectedIndex()).toString()+"'"+")");
+            insertTableSQL=("INSERT INTO stuff"+"(Name,ID,Password,PhoneNum,Dep)"+"VALUES"+"("+"'"+jTextField1.getText()+"','"+
+                    jTextField2.getText()+"','"+jTextField3.getText()+"','"+jTextField6.getText()+"','"+
+                    jComboBox1.getItemAt(jComboBox1.getSelectedIndex()).toString()+"'"+")");
             statement.executeUpdate(insertTableSQL);
             JOptionPane.showMessageDialog(null,"Stuff has been Added Successfully");
             jTextField1.setText("");
