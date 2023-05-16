@@ -1,5 +1,7 @@
 package doctor2;
 
+import Login.Firstpage;
+
 
 
 /**
@@ -219,19 +221,23 @@ public class DOC extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
+     Firstpage f =new Firstpage();
+     f.setVisible(true);
+     this.setVisible(false);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         Doc_Appointments p =new Doc_Appointments();
         p.setVisible(true);
+        this.setVisible(false);
+
                 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -239,6 +245,8 @@ public class DOC extends javax.swing.JFrame {
         // TODO add your handling code here:
         Doc_Patients p =new Doc_Patients();
         p.setVisible(true);
+        this.setVisible(false);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

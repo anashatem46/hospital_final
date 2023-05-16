@@ -3,8 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package doctor2;
-
-
+//import Login.LoginDoc;
+import conection.appconnection;
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -18,6 +24,32 @@ public class Doc_Appointments extends javax.swing.JFrame {
      */
     public Doc_Appointments() {
         initComponents();
+       try {
+             Statement statement=null;
+             Connection dbConnection=null;
+             appconnection mc1=new appconnection();
+             dbConnection=mc1.getconConnection();
+             statement=dbConnection.createStatement();
+             String sql1 = "Select * FROM appointment" ;
+             ResultSet rs1 = statement.executeQuery(sql1);
+             
+             while (rs1.next()) {        
+              String ID = String.valueOf(rs1.getInt("ID")) ; 
+              String Name = rs1.getString ("Name");
+              String Date= rs1.getString("Date");
+              String Day= rs1.getString("DAY");
+              String Time= rs1.getString("Time");
+              
+              String tbData[] = {ID, Name,Date,Day,Time};
+              DefaultTableModel tblModel =(DefaultTableModel)jTable1.getModel();
+                 
+              tblModel.addRow(tbData);           
+             }
+        } 
+        catch (SQLException ex) {
+                                System.out.println(ex.getMessage());
+
+            }  
     }
 
     /**
@@ -93,14 +125,14 @@ public class Doc_Appointments extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(75, 75, 75))
         );
 
         jLabel1.setText("Your Appointments");
 
-        jLabel2.setText("This is the latest update for your appointments for 7 days");
+        jLabel2.setText("This is the latest update for your appointments for Next 7 days");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,7 +145,7 @@ public class Doc_Appointments extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Patient Name", "Patient ID", "Date", "Day", "Time"
+                "Name", "ID", "Date", "Day", "Time"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -125,16 +157,15 @@ public class Doc_Appointments extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,8 +174,8 @@ public class Doc_Appointments extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 

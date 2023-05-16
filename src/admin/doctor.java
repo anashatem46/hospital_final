@@ -315,37 +315,10 @@ public class doctor extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-         try {
-             Statement statement=null;
-             Connection dbConnection=null;
-             appconnection mc1=new appconnection();
-             dbConnection=mc1.getconConnection();
-             statement=dbConnection.createStatement();
-             String sql1 = "Select * FROM doctor" ;
-             ResultSet rs1 = statement.executeQuery(sql1);
-             
-             while (rs1.next()) {        
-              String ID = String.valueOf(rs1.getInt("ID")) ;
-              String Name = rs1.getString ("Name");
-              String Mail= rs1.getString("mail");
-              String PhoueNum= rs1.getString("PhoneNum");
-              String specialty= rs1.getString("specialty");
-              
-              String tbData[] = {ID, Name, Mail,PhoueNum,specialty};
-                 DefaultTableModel tblModel =(DefaultTableModel)jTable1.getModel();
-                 
-                 tblModel.addRow(tbData);
-                 
-            
-               
-             }
-        } 
-        catch (SQLException ex) {
-                                System.out.println(ex.getMessage());
-
-            } n = new LoginDoc();
+        LoginDoc    n = new LoginDoc();
         n.setVisible(true);
         this.setVisible(false);
+         
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
