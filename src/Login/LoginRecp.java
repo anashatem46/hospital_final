@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
-import rec.dashboard;
+import rec.patient;
 /**
  *
  * @author aanshatem
@@ -88,7 +88,7 @@ public class LoginRecp extends javax.swing.JFrame {
              String sql1 = "Select * FROM stuff WHERE ID ='"+ ID.getText()+ "'and password='"+Password.getText()+ "'";
              ResultSet rs1 = statement.executeQuery(sql1);
              if (rs1.next()) {  
-                   dashboard n=new dashboard();
+                   patient n=new patient();
                    n.setVisible(true);
                   this.setVisible(false);
                 
