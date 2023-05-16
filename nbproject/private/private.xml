@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/doctor2/DOC.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/admin/Dashboardadmin.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/admin/EditDoctor.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/Login/Firstpage.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/Login/LoginPatint.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/Login/LoginAdmin.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/rec/searchpatient.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/admin/ADDdoctor.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/doctor2/DOC_APPOINT.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/Login/LoginRecp.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/Login/main.java</file>
+            <file>file:/Users/aanshatem/Documents/GitHub/hospital_final/src/admin/doctor.java</file>
+        </group>
     </open-files>
 </project-private>
