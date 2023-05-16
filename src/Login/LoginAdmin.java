@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Login;
-import admin.doctor;
+import admin.Dashboardadmin;
 import conection.appconnection;
 import java.sql.Statement;
 import java.sql.Connection;
@@ -107,7 +107,9 @@ public class LoginAdmin extends javax.swing.JFrame {
             String sql1 = "Select * FROM Admin WHERE ID ='"+ ID.getText()+ "'and password='"+Password.getText()+ "'";
             ResultSet rs1 = statement.executeQuery(sql1);
             if (rs1.next()) {
-                doctor n=new doctor();
+                String Name = rs1.getString("Name");
+                Dashboardadmin n=new Dashboardadmin();
+                n.SetName(Name);
                 n.setVisible(true);
                 this.setVisible(false);
 

@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Login;
+
+import admin.Dashboardadmin;
 import admin.doctor;
 import conection.appconnection;
 import doctor2.DOC;
@@ -12,15 +14,13 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author aanshatem
  */
 public class LoginDoc extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Loginall
-     */
     public LoginDoc() {
         initComponents();
     }
@@ -100,24 +100,25 @@ public class LoginDoc extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-             Statement statement=null;
-             Connection dbConnection=null;
-             appconnection mc1=new appconnection();
-             dbConnection=mc1.getconConnection();
-             statement=dbConnection.createStatement();
-             String sql1 = "Select * FROM doctor WHERE ID ='"+ ID.getText()+ "'and password='"+Password.getText()+ "'";
-             ResultSet rs1 = statement.executeQuery(sql1);
-             if (rs1.next()) {  
-                   DOC n=new DOC();
-                   n.setVisible(true);
-                  this.setVisible(false);
-                
-             }
-        } 
-        catch (SQLException ex) {
-              System.out.println(ex.getMessage());
-                
+            Statement statement = null;
+            Connection dbConnection = null;
+            appconnection mc1 = new appconnection();
+            dbConnection = mc1.getconConnection();
+            statement = dbConnection.createStatement();
+            String sql1 = "Select * FROM doctor WHERE ID ='" + ID.getText() + "'and password='" + Password.getText() + "'";
+            ResultSet rs1 = statement.executeQuery(sql1);
+            if (rs1.next()) {
+                String Name = rs1.getString("Name");
+                DOC n = new DOC();
+                n.SetName(Name);
+                n.setVisible(true);
+                this.setVisible(false);
+
             }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
