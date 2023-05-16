@@ -37,18 +37,29 @@ public class Dashboardadmin extends javax.swing.JFrame {
             appconnection mc1=new appconnection();
             dbConnection=mc1.getconConnection();
             statement=dbConnection.createStatement();
+            
+              String sql2 = "SELECT indx FROM patint ORDER BY Id DESC LIMIT 1;";
+            ResultSet rs2 = statement.executeQuery(sql2);
+            while (rs2.next()) 
+            {
+                    jTextField3.setText(rs2.getString("indx"));      
+            }
+            
+            String sql3 = "SELECT indx FROM patint ORDER BY Id DESC LIMIT 1;";
+            ResultSet rs3 = statement.executeQuery(sql3);
+            while (rs3.next()) 
+            {
+                    jTextField2.setText(rs3.getString("indx"));      
+            }
+            
             String sql1 = "Select * FROM admin WHERE Name = '"+ Name+"'";
-            ResultSet rs2 = statement.executeQuery(sql1);
+            ResultSet rs1 = statement.executeQuery(sql1);
 
             // ResultSet rs = appconnection.getDate("SELECT * FROM patint WHERE ID= '"+search.getText()+"'");
-            if(rs2.next())
+            if(rs1.next())
             {
-                jLabel3.setText(rs2.getString("Name")+" ");
-                jTextField2.setText(rs2.getString("Name")+" ");
-                //this.repaint();
-              
-                System.out.println(rs2.getString("ID"));
-                
+                jLabel3.setText(rs1.getString("Name")+" ");
+          
             }
         }
         catch (Exception ex)
@@ -119,7 +130,7 @@ public class Dashboardadmin extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -153,7 +164,7 @@ public class Dashboardadmin extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addGap(71, 71, 71))
         );
@@ -194,10 +205,10 @@ public class Dashboardadmin extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
