@@ -138,7 +138,7 @@ public class Stuff extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mail", "PhoneNum", "DEP"
+                "ID", "Name", "PhoneNum", "DEP"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

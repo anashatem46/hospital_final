@@ -4,6 +4,7 @@
  */
 package Login;
 import admin.doctor;
+import rec.dashboard;
 import conection.appconnection;
 import java.sql.Statement;
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
+import rec.dashboard;
 /**
  *
  * @author aanshatem
@@ -86,7 +88,7 @@ public class LoginRecp extends javax.swing.JFrame {
              String sql1 = "Select * FROM stuff WHERE ID ='"+ ID.getText()+ "'and password='"+Password.getText()+ "'";
              ResultSet rs1 = statement.executeQuery(sql1);
              if (rs1.next()) {  
-                   doctor n=new doctor();
+                   dashboard n=new dashboard();
                    n.setVisible(true);
                   this.setVisible(false);
                 
