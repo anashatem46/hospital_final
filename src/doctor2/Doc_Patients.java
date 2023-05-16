@@ -299,7 +299,7 @@ public class Doc_Patients extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Doc_Appointments P =new Doc_Appointments();
+        DOC_APPOINT P =new DOC_APPOINT();
         P.setVisible(true);
         this.setVisible(false);
 
