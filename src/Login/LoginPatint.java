@@ -105,7 +105,7 @@ public class LoginPatint extends javax.swing.JFrame {
             appconnection mc1=new appconnection();
             dbConnection=mc1.getconConnection();
             statement=dbConnection.createStatement();
-            String sql1 = "Select * FROM Admin WHERE ID ='"+ ID.getText()+ "'and password='"+Password.getText()+ "'";
+            String sql1 = "Select * FROM patint WHERE ID ='"+ ID.getText()+ "'and password='"+Password.getText()+ "'";
             ResultSet rs1 = statement.executeQuery(sql1);
             if (rs1.next()) {
                 String Name = rs1.getString("Name");
