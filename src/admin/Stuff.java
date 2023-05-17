@@ -180,7 +180,6 @@ public class Stuff extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(10, 97, 135));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/9034324_dashboard_icon (1).png"))); // NOI18N
         jButton3.setText("Overview");
-        jButton3.setBorder(null);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -191,7 +190,6 @@ public class Stuff extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(10, 97, 135));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/3436593_doctor_healthcare_hospital_medical_pharmacy_icon.png"))); // NOI18N
         jButton1.setText("Doctors");
-        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -202,7 +200,6 @@ public class Stuff extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(10, 97, 135));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/1242851_myspace_social_social media_icon.png"))); // NOI18N
         jButton4.setText("Stuff");
-        jButton4.setBorder(null);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -213,7 +210,6 @@ public class Stuff extends javax.swing.JFrame {
         jButton5.setForeground(new java.awt.Color(10, 97, 135));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/3994382_access_close_exit_logout_sign out_icon.png"))); // NOI18N
         jButton5.setText("Log out");
-        jButton5.setBorder(null);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
