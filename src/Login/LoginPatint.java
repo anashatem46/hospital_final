@@ -43,7 +43,7 @@ public class LoginPatint extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Log As Admin");
+        setTitle("Patient Login");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N

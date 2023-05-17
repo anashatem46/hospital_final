@@ -54,7 +54,7 @@ public class Firstpage extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 116, 100));
 
         jButton2.setBackground(new java.awt.Color(242, 242, 242));
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asmaa\\Downloads\\6217210_doctor_job_man_medical_people_icon (2).png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/6217210_doctor_job_man_medical_people_icon (2).png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

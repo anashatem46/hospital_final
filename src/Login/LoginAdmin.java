@@ -42,7 +42,7 @@ public class LoginAdmin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Log As Admin");
+        setTitle("Admin Login");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -56,12 +56,15 @@ public class LoginAdmin extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 120, 50));
 
+        ID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IDActionPerformed(evt);
             }
         });
         getContentPane().add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 180, 30));
+
+        Password.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         getContentPane().add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 180, 30));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -85,6 +88,7 @@ public class LoginAdmin extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 120, 50));
 
+        jLabel1.setDisplayedMnemonic('A');
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/background7.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 0, 920, -1));

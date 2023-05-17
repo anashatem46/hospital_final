@@ -81,51 +81,52 @@ public class DOC_APPOINT extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Appointments");
 
-        jPanel1.setBackground(new java.awt.Color(245, 242, 242));
+        jPanel1.setBackground(new java.awt.Color(10, 97, 135));
         jPanel1.setPreferredSize(new java.awt.Dimension(195, 600));
 
-        jButton3.setBackground(new java.awt.Color(0, 163, 241));
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(new java.awt.Color(10, 97, 135));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/5898907_bacteria_face_mask_patient_transmission_icon.png"))); // NOI18N
         jButton3.setText("Patients");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.setBorder(null);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 163, 241));
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(10, 97, 135));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/2877003_calendar_dashboard_deadline_schedule_icon.png"))); // NOI18N
         jButton2.setText("Appointments");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 163, 241));
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setForeground(new java.awt.Color(10, 97, 135));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/9034324_dashboard_icon (1).png"))); // NOI18N
         jButton4.setText("DashBoard");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 163, 241));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(10, 97, 135));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/3994382_access_close_exit_logout_sign out_icon.png"))); // NOI18N
         jButton1.setText("Logout");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -164,18 +165,19 @@ public class DOC_APPOINT extends javax.swing.JFrame {
                 .addContainerGap(145, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(245, 242, 242));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 163, 241));
+        jLabel1.setForeground(new java.awt.Color(242, 89, 68));
         jLabel1.setText("Your Appointments");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 163, 241));
+        jLabel2.setForeground(new java.awt.Color(10, 97, 135));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("This is the Latest Update for Your Appointments For This week");
 
-        jTable1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jTable1.setBackground(new java.awt.Color(204, 204, 204));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setForeground(new java.awt.Color(9, 82, 129));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -222,7 +224,7 @@ public class DOC_APPOINT extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(65, 65, 65)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
