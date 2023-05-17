@@ -90,8 +90,8 @@ public class LoginRecp extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 120, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/background7.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 0, 840, 630));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/doctors-day9.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 610));
 
         pack();
         setLocationRelativeTo(null);
